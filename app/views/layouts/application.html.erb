@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body >
+    <nav class="navbar navbar-default" style="background-color: pink">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Post</a></li>
+        </ul>
+      
+      <div id="user_nav" style="margin-left:85%",>
+          <% if user_signed_in? %>
+           <!-- Copyright Signed in as <%#= current_user.email %>. Not you?-->
+          <button> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></button>
+          <% else %>
+         <button> <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %></button>
+        <% end %>
+      </div>
+      </div>
+    </nav>
+    
+    <%= yield %>
+    <br><br><br>
+    <footer class="page-footer font-small indigo" style="background-color: cyan">
+      <div class="container text-center text-md-left">
+        <div class="row">
+          <div class="col-md-3 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.facebook.com/">Facebook</a>
+              </li>
+              <li>
+                <a href="https://ads.twitter.com/login">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/accounts/login/">Instagram</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/">Youtube</a>
+              </li>
+            </ul>
+          </div>
+          
+
+          <br><br>
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+   </body>
+  </body>
+</html>
