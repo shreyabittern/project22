@@ -56,5 +56,13 @@ gem 'carrierwave'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'activeadmin'
-
-
+gem "oauth"
+gem "oauth2"
+gem 'omniauth-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-linkedin'
+gem 'omniauth-github'
+gem 'omniauth-pinterest'
+gem 'activeadmin-searchable_select'

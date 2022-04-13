@@ -10,15 +10,21 @@
   </head>
 
   <body >
-    <nav class="navbar navbar-default" style="background-color: pink">
+    <nav class="navbar navbar-default" style="background-color: orange">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">WebSiteName</a>
         </div>
         <ul class="nav navbar-nav">
+          <li class="active"><a href="/homes">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav">
           <li class="active"><a href="/">Post</a></li>
         </ul>
-      
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/contacts">Contact Us</a></li>
+        </ul>
       <div id="user_nav" style="margin-left:85%",>
           <% if user_signed_in? %>
            <!-- Copyright Signed in as <%#= current_user.email %>. Not you?-->
@@ -32,7 +38,7 @@
     
     <%= yield %>
     <br><br><br>
-    <footer class="page-footer font-small indigo" style="background-color: cyan">
+    <footer class="page-footer font-small indigo" style="background-color: orange; margin-top: 2%;">
       <div class="container text-center text-md-left">
         <div class="row">
           <div class="col-md-3 mx-auto">
